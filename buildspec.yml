@@ -22,4 +22,6 @@ artifacts:
   post_build:
     commands:
       - echo "Copying artifacts to S3"
-      - aws s3 cp dist s3://abnewwwww/artifact-dev --recursive
+      - cd dist
+      - ls -al
+      - aws s3 cp . s3://abnewwwww/artifact-dev --recursive
