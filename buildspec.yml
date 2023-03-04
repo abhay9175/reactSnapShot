@@ -16,4 +16,4 @@ phases:
     commands:
       - echo "Updating files in the S3 bucket..."
       - aws s3 ls
-      - aws s3 cp dist/* s3://abnewwwww/artifact-dev/ --recursive
+      - aws s3 cp /aws-codebuild-output-* s3://abnewwwww/artifact-dev/ --recursive
