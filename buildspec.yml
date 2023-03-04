@@ -15,4 +15,5 @@ phases:
   post_build:
     commands:
       - echo "Copying artifacts to S3"
-      - aws s3 cp /codebuild/output/* s3://abnewwwww/artifact-dev --recursive
+      - aws s3 ls
+      - aws s3 cp /codebuild/* s3://abnewwwww/artifact-dev --recursive
