@@ -8,10 +8,10 @@ phases:
       - npm install
       - npm install -g @angular/cli@10.0.8
   build:
-    commands:
+    commands:https://github.com/abhay9175/reactSnapShot/blob/master/buildspec.yml
       - echo "Building Angular project..."
       - npm run build
   post_build:
     commands:
       - echo "Updating files in the S3 bucket..."
-      - aws s3 sync dist/reactSnapShot/ s3://abreact112 --delete
+      - aws s3 sync --debug dist/reactSnapShot/ s3://abreact112 --delete
