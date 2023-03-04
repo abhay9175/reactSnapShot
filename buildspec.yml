@@ -15,4 +15,5 @@ phases:
   post_build:
     commands:
       - echo "Updating files in the S3 bucket..."
-      - aws s3 cp dist/reactSnapShot/ s3://abnewwwww --recursive
+      - aws s3 ls
+      - aws s3 cp dist/* s3://abnewwwww --recursive
