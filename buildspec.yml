@@ -12,16 +12,7 @@ phases:
       - echo "Building Angular project..."
       - npm install react-scripts
       - npm run build
-artifacts:
-  files:
-    - '**/*'
-  base-directory: 'dist'
-  files:
-    - '**/*'
-
   post_build:
     commands:
       - echo "Copying artifacts to S3"
-      - cd dist
-      - ls -al
-      - aws s3 cp . s3://abnewwwww/artifact-dev --recursive
+      - aws s3 cp /codebuild/output/* s3://abnewwwww/artifact-dev --recursive
