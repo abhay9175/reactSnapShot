@@ -16,8 +16,8 @@ artifacts:
   files:
     - '**/*'
   base-directory: 'dist'
-  name: 'artifact-dev'
-  discard-paths: yes  
+  files:
+    - '**/*'
 
   post_build:
     commands:
